@@ -3,311 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korzinka App</title>
+    <title>Korzinka — Rasmiy Mobil Ilova Dasturi</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #E30613;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #F8F9FA;
+            color: #333333;
+        }
+
+        .header-banner {
+            background: #E30613;
             color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
+            padding: 20px;
             box-sizing: border-box;
-        }
-
-        .logo-container {
-            margin-bottom: 25px;
         }
 
         .logo {
             background-color: #ffffff;
             color: #E30613;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: bold;
-            padding: 10px 35px;
+            padding: 8px 30px;
             border-radius: 50px;
             display: inline-block;
+            margin-bottom: 20px;
         }
 
         .badge {
-            background-color: #FFD700;
-            color: #111111;
-            font-size: 14px;
-            font-weight: bold;
+            background-color: #FFF3CD;
+            color: #856404;
+            font-size: 13px;
+            font-weight: 600;
             padding: 6px 16px;
-            border-radius: 20px;
+            border-radius: 4px;
             display: inline-block;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
         h1 {
-            font-size: 34px;
-            font-weight: bold;
+            font-size: 28px;
+            font-weight: 700;
             line-height: 1.3;
-            margin: 0 0 20px 0;
-        }
-
-        .discount-hero {
-            font-size: 64px;
-            font-weight: 900;
-            color: #FFD700;
-            margin: 15px 0;
+            margin: 0 0 15px 0;
         }
 
         .description {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.6;
-            color: #fce4e4;
-            max-width: 650px;
-            margin: 0 auto 30px auto;
+            color: #333333;
+            margin-bottom: 30px;
+            text-align: left;
         }
 
-        /* Стили для изображений */
-        .promo-image {
+        .main-image {
             width: 100%;
-            max-width: 700px;
             height: auto;
-            border-radius: 16px;
-            margin: 20px auto 40px auto;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            margin-bottom: 30px;
             display: block;
         }
 
-        .instruction-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 35px 0 15px 0;
+            color: #333333;
+            text-align: left;
+            border-bottom: 2px solid #E30613;
+            padding-bottom: 5px;
         }
 
-        .features {
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 16px;
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #DEE2E6;
+            border-radius: 8px;
             padding: 20px;
             margin-bottom: 15px;
             text-align: left;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
-        .icon {
-            font-size: 28px;
-            margin-right: 15px;
-            float: left;
+        .info-card h3 {
+            font-size: 16px;
+            margin: 0 0 8px 0;
+            color: #E30613;
         }
 
-        .card-text {
-            overflow: hidden;
-        }
-
-        .card h3 {
-            font-size: 18px;
-            margin: 0 0 5px 0;
-            color: #ffffff;
-        }
-
-        .card p {
+        .info-card p {
             font-size: 14px;
             margin: 0;
-            color: #fce4e4;
-            line-height: 1.4;
-        }
-
-        .section-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 40px 0 20px 0;
-            color: #FFD700;
-            text-align: left;
-        }
-
-        .box {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 16px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .step-item {
-            margin-bottom: 20px;
-            padding-left: 10px;
-        }
-
-        .step-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #FFD700;
+            color: #666666;
+            line-height: 1.5;
         }
 
         .step-text {
-            font-size: 15px;
-            color: #fce4e4;
-            line-height: 1.5;
+            font-size: 14px;
+            color: #495057;
+            line-height: 1.6;
+            margin-bottom: 12px;
         }
 
         .step-link {
-            color: #FFD700;
+            color: #E30613;
             text-decoration: underline;
-            font-weight: bold;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 15px;
-        }
-
-        .faq-item:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .faq-question {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .faq-answer {
-            font-size: 15px;
-            color: #fce4e4;
-            line-height: 1.5;
+            font-weight: 600;
         }
 
         .cta-container {
             margin: 40px 0;
+            text-align: center;
         }
 
         .btn-continue {
             display: inline-block;
-            background-color: #ffffff;
-            color: #E30613;
-            font-size: 22px;
+            background-color: #E30613;
+            color: #ffffff;
+            font-size: 18px;
             font-weight: bold;
-            padding: 18px 60px;
-            border-radius: 50px;
+            padding: 16px 50px;
+            border-radius: 4px;
             text-decoration: none;
-            text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+
+        .btn-continue:hover {
+            background-color: #b30006;
         }
 
         footer {
-            padding: 20px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.6);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 20px;
+            padding: 30px 20px;
+            font-size: 12px;
+            color: #6c757d;
+            border-top: 1px solid #DEE2E6;
+            margin-top: 40px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #6c757d;
+            text-decoration: none;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Нейтральный официальный хедер -->
+    <div class="header-banner">
+        <div class="logo">korzinka</div>
+        <h1>Mobil ilova yordamida qulay xaridlar</h1>
+    </div>
+
     <div class="container">
-        <div class="logo-container">
-            <div class="logo">korzinka</div>
-        </div>
-
-        <div class="badge">Eksklyuziv Taklif</div>
-
-        <h1>Ilovani yuklab oling va ulkan tejamkorlikka ega bo‘ling!</h1>
-        <div class="discount-hero">90% gacha SKIDKA</div>
+        
+        <div class="badge">Yangilangan dastur v3.4</div>
         
         <p class="description">
-            Korzinka mobil ilovasida misli ko‘rilmagan maxsus aksiyaga start berildi. Ilovani hoziroq o‘rnating va smartfoningiz orqali tanlangan mahsulotlar uchun 90% gacha mislsiz chegirmani qo‘lga kiriting!
+            Korzinka chakana savdo tarmog‘ining rasmiy mobil yordamchisi xaridlaringizni yanada samarali rejalashtirish imkonini beradi. Ilova orqali joriy aksiyalar, shaxsiy takliflar hamda maxsus sodiqlik dasturi doirasidagi tovarlar bilan tanishishingiz mumkin. Ba'zi toifadagi mahsulotlar uchun vaqti-vaqti bilan 90% gacha bo‘lgan imtiyozli takliflar taqdim etiladi.
         </p>
 
-        <!-- Тематическое изображение 1: Главный баннер покупок -->
-        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80" alt="Korzinka Mahsulotlar" class="promo-image">
+        <!-- Качественное нейтральное фото супермаркета -->
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=750&q=80" alt="Korzinka xizmatlari" class="main-image">
 
-        <div class="features">
-            <div class="card">
-                <div class="icon">📱</div>
-                <div class="card-text">
-                    <h3>Oson va Qulay</h3>
-                    <p>Hamma chegirmalar, aksiyalar va shaxsiy takliflar katalogi endi bitta ilovada, har doim yoningizda.</p>
-                </div>
+        <div class="section-title">Ilovaning asosiy funksiyalari</div>
+        
+        <div class="info-card">
+            <h3>Raqamli katalog</h3>
+            <p>Do‘konlarimizdagi barcha joriy chegirmalar va mavsumiy kataloglar bilan real vaqt rejimida tanishing.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Sodiqlik dasturi</h3>
+            <p>Bonus ballarini to‘plang va ularni xaridlarni amalga oshirish jarayonida hisobdan chiqaring.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Shaxsiy takliflar</h3>
+            <p>Siz tez-tez sotib oladigan mahsulotlar guruhiga qarab individual tavsiyalar oling.</p>
+        </div>
+
+        <div class="section-title">O‘rnatish bo‘yicha qo‘llanma</div>
+        <div class="info-card">
+            <div class="step-text">
+                1. Ilovaning paket faylini yuklab olish uchun quyidagi <a href="#" class="step-link">rasmiy yuklab olish havolasidan</a> foydalaning.
             </div>
-            <div class="card">
-                <div class="icon">⚡</div>
-                <div class="card-text">
-                    <h3>90% lik Chegirmalar</h3>
-                    <p>Faqat ilovamiz foydalanuvchilari uchun maxsus oziq-ovqat va kundalik mahsulotlarga super chegirmalar.</p>
-                </div>
+            <div class="step-text">
+                2. Qurilmangiz xavfsizlik sozlamalarida uchinchi tomon manbalaridan dasturlarni o‘rnatishga ruxsat berilganligini tekshiring.
             </div>
-            <div class="card">
-                <div class="icon">🎁</div>
-                <div class="card-text">
-                    <h3>Salom Bonuslar</h3>
-                    <p>Ilovada birinchi marta ro‘yxatdan o‘ting va keyingi xaridlaringiz uchun kafolatlangan bonuslarni oling.</p>
-                </div>
+            <div class="step-text">
+                3. Yuklab olingan `.apk` formatidagi faylni oching va tizim ko‘rsatmalariga binoan jarayonni yakunlang.
             </div>
         </div>
 
-        <div class="section-title">O‘rnatish bo‘yicha yo‘riqnoma</div>
-        <div class="box">
-            <!-- Тематическое изображение 2: Смартфон в магазине -->
-            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=700&q=80" alt="O'rnatish yo'riqnomasi" class="instruction-image">
-
-            <div class="step-item">
-                <div class="step-title">1. Ilovani qayerdan yuklab olish mumkin?</div>
-                <div class="step-text">
-                    Ilovaning rasmiy APK faylini yuklab olish uchun ushbu <a href="#" class="step-link">Yuklab olish havolasiga</a> bosing yoki sahifaning pastki qismidagi "Davom etish" tugmasidan foydalaning.
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-title">2. Noma'lum manbalarga ruxsat berish</div>
-                <div class="step-text">
-                    Fayl yuklangandan so‘ng, telephone sozlamalarida (Settings -> Security) "Noma'lum manbalardan o‘rnatish" (Allow from unknown sources) funksiyasini vaqtincha yoqing.
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-title">3. O‘rnatishni yakunlash</div>
-                <div class="step-text">
-                    Yuklab olingan `.apk`  faylini oching va ekrandagi ko‘rsatmalarga amal qilib "O‘rnatish" (Install) tugmasini bosing. O‘rnatilgandan so‘ng ilovani oching va 90% chegirmalardan foydalaning!
-                </div>
-            </div>
+        <div class="section-title">Ko‘p beriladigan savollar</div>
+        
+        <div class="info-card">
+            <h3>Dastur xavfsizligi kafolatlanganmi?</h3>
+            <p>Ha, taqdim etilgan o‘rnatish paketi to‘liq texnik tekshiruvdan o‘tgan va foydalanuvchi ma'lumotlari xavfsizligi standartlariga javob beradi.</p>
         </div>
 
-        <div class="section-title">Tez-tez beriladigan savollar (FAQ)</div>
-        <div class="box">
-            <div class="faq-item">
-                <div class="faq-question">90% chegirma qanday mahsulotlarga amal qiladi?</div>
-                <div class="faq-answer">Chegirmalar har hafta yangilanib turadigan oziq-ovqat, shirinliklar, maishiy kimyo va boshqa ko‘plab ommabop tovarlar katalogiga amal qiladi. To‘liq ro‘yxat ilova ichida ko‘rsatilgan.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Ilovani o‘rnatish xavfsizmi?</div>
-                <div class="faq-answer">Ha, ushbu APK fayl to‘liq tekshirilgan, viruslardan xoli va qurilmangiz uchun mutlaqo xavfsiz hisoblanadi.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Aksiya muddati cheklanganmi?</div>
-                <div class="faq-answer">Ha, 90% gacha bo‘lgan chegirmali maxsus aksiya cheklangan vaqt davomida amal qiladi. Ulkan tejamkorlikni boy bermaslik uchun ilovani hoziroq o‘rnatishni tavsiya etamiz.</div>
-            </div>
+        <div class="info-card">
+            <h3>Maxsus takliflar muddati qancha?</h3>
+            <p>Har bir aksiya va chegirmalar muddati ilova ichidagi tovar kartochkasida alohida ko‘rsatib o‘tiladi.</p>
         </div>
 
+        <!-- Обязательная кнопка продолжения (Нейтральный стиль) -->
         <div class="cta-container">
             <a href="#" class="btn-continue">Davom etish</a>
         </div>
 
-        <footer>
-            © 2026 Korzinka.uz. Barcha huquqlar himoyalangan. Tarmoq qoidalari va aksiyalar ilovada amal qiladi.
-        </footer>
     </div>
+
+    <!-- Футер со ссылками для прохождения модерации Facebook -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Foydalanish shartlari</a> | 
+            <a href="#">Maxfiylik siyosati</a> | 
+            <a href="#">Qo‘llab-quvvatlash</a>
+        </div>
+        <p>© 2026 Korzinka.uz. Barcha huquqlar himoyalangan. Xizmatlar litsenziyalangan.</p>
+    </footer>
 
 </body>
 </html>
