@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korzinka App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #E30613;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            background-color: #ffffff;
+            color: #E30613;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px 35px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .badge {
+            background-color: #FFD700;
+            color: #111111;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.3;
+            margin: 0 0 20px 0;
+        }
+
+        .discount-hero {
+            font-size: 64px;
+            font-weight: 900;
+            color: #FFD700;
+            margin: 15px 0;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fce4e4;
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Стили для изображений */
+        .promo-image {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 16px;
+            margin: 20px auto 40px auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            display: block;
+        }
+
+        .instruction-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .icon {
+            font-size: 28px;
+            margin-right: 15px;
+            float: left;
+        }
+
+        .card-text {
+            overflow: hidden;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 0;
+            color: #fce4e4;
+            line-height: 1.4;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 40px 0 20px 0;
+            color: #FFD700;
+            text-align: left;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .step-item {
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #FFD700;
+        }
+
+        .step-text {
+            font-size: 15px;
+            color: #fce4e4;
+            line-height: 1.5;
+        }
+
+        .step-link {
+            color: #FFD700;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 15px;
+            color: #fce4e4;
+            line-height: 1.5;
+        }
+
+        .cta-container {
+            margin: 40px 0;
+        }
+
+        .btn-continue {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #E30613;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 18px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            padding: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">korzinka</div>
+        </div>
+
+        <div class="badge">Eksklyuziv Taklif</div>
+
+        <h1>Ilovani yuklab oling va ulkan tejamkorlikka ega bo‘ling!</h1>
+        <div class="discount-hero">90% gacha SKIDKA</div>
+        
+        <p class="description">
+            Korzinka mobil ilovasida misli ko‘rilmagan maxsus aksiyaga start berildi. Ilovani hoziroq o‘rnating va smartfoningiz orqali tanlangan mahsulotlar uchun 90% gacha mislsiz chegirmani qo‘lga kiriting!
+        </p>
+
+        <!-- Тематическое изображение 1: Главный баннер покупок -->
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80" alt="Korzinka Mahsulotlar" class="promo-image">
+
+        <div class="features">
+            <div class="card">
+                <div class="icon">📱</div>
+                <div class="card-text">
+                    <h3>Oson va Qulay</h3>
+                    <p>Hamma chegirmalar, aksiyalar va shaxsiy takliflar katalogi endi bitta ilovada, har doim yoningizda.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">⚡</div>
+                <div class="card-text">
+                    <h3>90% lik Chegirmalar</h3>
+                    <p>Faqat ilovamiz foydalanuvchilari uchun maxsus oziq-ovqat va kundalik mahsulotlarga super chegirmalar.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">🎁</div>
+                <div class="card-text">
+                    <h3>Salom Bonuslar</h3>
+                    <p>Ilovada birinchi marta ro‘yxatdan o‘ting va keyingi xaridlaringiz uchun kafolatlangan bonuslarni oling.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">O‘rnatish bo‘yicha yo‘riqnoma</div>
+        <div class="box">
+            <!-- Тематическое изображение 2: Смартфон в магазине -->
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=700&q=80" alt="O'rnatish yo'riqnomasi" class="instruction-image">
+
+            <div class="step-item">
+                <div class="step-title">1. Ilovani qayerdan yuklab olish mumkin?</div>
+                <div class="step-text">
+                    Ilovaning rasmiy APK faylini yuklab olish uchun ushbu <a href="#" class="step-link">Yuklab olish havolasiga</a> bosing yoki sahifaning pastki qismidagi "Davom etish" tugmasidan foydalaning.
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-title">2. Noma'lum manbalarga ruxsat berish</div>
+                <div class="step-text">
+                    Fayl yuklangandan so‘ng, telephone sozlamalarida (Settings -> Security) "Noma'lum manbalardan o‘rnatish" (Allow from unknown sources) funksiyasini vaqtincha yoqing.
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-title">3. O‘rnatishni yakunlash</div>
+                <div class="step-text">
+                    Yuklab olingan `.apk`  faylini oching va ekrandagi ko‘rsatmalarga amal qilib "O‘rnatish" (Install) tugmasini bosing. O‘rnatilgandan so‘ng ilovani oching va 90% chegirmalardan foydalaning!
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">Tez-tez beriladigan savollar (FAQ)</div>
+        <div class="box">
+            <div class="faq-item">
+                <div class="faq-question">90% chegirma qanday mahsulotlarga amal qiladi?</div>
+                <div class="faq-answer">Chegirmalar har hafta yangilanib turadigan oziq-ovqat, shirinliklar, maishiy kimyo va boshqa ko‘plab ommabop tovarlar katalogiga amal qiladi. To‘liq ro‘yxat ilova ichida ko‘rsatilgan.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Ilovani o‘rnatish xavfsizmi?</div>
+                <div class="faq-answer">Ha, ushbu APK fayl to‘liq tekshirilgan, viruslardan xoli va qurilmangiz uchun mutlaqo xavfsiz hisoblanadi.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Aksiya muddati cheklanganmi?</div>
+                <div class="faq-answer">Ha, 90% gacha bo‘lgan chegirmali maxsus aksiya cheklangan vaqt davomida amal qiladi. Ulkan tejamkorlikni boy bermaslik uchun ilovani hoziroq o‘rnatishni tavsiya etamiz.</div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="btn-continue">Davom etish</a>
+        </div>
+
+        <footer>
+            © 2026 Korzinka.uz. Barcha huquqlar himoyalangan. Tarmoq qoidalari va aksiyalar ilovada amal qiladi.
+        </footer>
+    </div>
+
+</body>
+</html>
